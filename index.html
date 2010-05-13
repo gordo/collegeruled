@@ -66,35 +66,37 @@
 
 
 		<script type="text/javascript">
-				var li = document.createElement("li");
-				var collegeruled = document.getElementById("collegeruled");
-				var liner = document.getElementById("liner");
-				var themessage = document.getElementById("themessage");
-			
-				function grow() {
-					if (this.scrollHeight > this.clientHeight && !window.opera) {
-						//this.rows += 1;
-						this.style.height = (this.style.height.split("px")[0]*1 + 25) + "px";
-						growPage();
-					}
+			var li = document.createElement("li");
+			var collegeruled = document.getElementById("collegeruled");
+			var liner = document.getElementById("liner");
+			var themessage = document.getElementById("themessage");
+		
+			function grow() {
+				if (this.scrollHeight > this.clientHeight && !window.opera) {
+					this.style.height = (this.style.height.split("px")[0]*1 + 25) + "px";
+					growPage();
 				}
-				function growTextArea() {
-					if (!document.getElementById)
-						return;
-					//themessage.rows = 5;
-					themessage.onkeypress = grow;
+			}
+			function growTextArea() {
+				if (!document.getElementById)
+					return;
+				themessage.onkeypress = grow;
+				
+			}
+			function growPage() {
+				if (themessage.style.height.split("px")[0]*1 >= 475) {
 					
+					// This technique is wiping out the textarea input
+					// collegeruled.innerHTML += "<li></li>";
+					
+					li = document.createElement("li");
+					collegeruled.appendChild(li);
+
+					// There has to be a better way to handle the heights
+					liner.style.height = (liner.style.height.split("px")[0]*1 + 25) + "px";
+					collegeruled.style.height = (collegeruled.style.height.split("px")[0]*1 + 25) + "px";
 				}
-				function growPage() {
-					if (themessage.style.height.split("px")[0]*1 >= 475) {
-						//collegeruled.innerHTML += "<li></li>";
-						li = document.createElement("li");
-						collegeruled.appendChild(li);
-	
-						liner.style.height = (liner.style.height.split("px")[0]*1 + 25) + "px";
-						collegeruled.style.height = (collegeruled.style.height.split("px")[0]*1 + 25) + "px";
-					}
-				}
+			}
 		</script>
 
 		<!--Created: 2010 May 12-->

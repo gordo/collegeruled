@@ -74,7 +74,7 @@
 			
 				function grow() {
 					if (this.scrollHeight > this.clientHeight) {
-						this.style.height = (this.style.height.split("px")[0]*1 + 25) + "px";
+						this.style.height = parseInt(this.style.height) + 25 + "px";
 						growPage();
 					}
 				}
@@ -85,23 +85,20 @@
 					
 				}
 				function growPage() {
-					if (themessage.style.height.split("px")[0]*1 >= 475) {
-						
-						// This technique is wiping out the textarea input
-						// collegeruled.innerHTML += "<li></li>";
+					if (parseInt(themessage.style.height) >= 475) {
 						
 						li = document.createElement("li");
 						collegeruled.appendChild(li);
 	
-						// There has to be a better way to handle the heights
-						liner.style.height = (liner.style.height.split("px")[0]*1 + 25) + "px";
-						collegeruled.style.height = (collegeruled.style.height.split("px")[0]*1 + 25) + "px";
+						liner.style.height = parseInt(liner.style.height) + 25 + "px";
+						collegeruled.style.height = parseInt(collegeruled.style.height) + 25 + "px";
 					}
 				}
 			//})();
 		</script>
 
 		<!--Created: 2010 May 12-->
+		<!--Revised: 2010 May 19-->
 		
 		<script type="text/javascript">
 		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -112,6 +109,5 @@
 		var pageTracker = _gat._getTracker("UA-299058-9");
 		pageTracker._trackPageview();
 		} catch(err) {}</script>
-		
 	</body>
 </html>

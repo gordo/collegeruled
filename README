@@ -1,4 +1,3 @@
 2010 May 12. College-ruled paper web form with infinitely expandable textarea and page.
 
-Tested as working in: Safari, Chrome, Firefox, Camino, Opera, IE 8/7
-Partially working in: IE 6 (textarea pushes lines below downward upon expansion)
+Tested as working in: Safari, Chrome, Firefox, Camino, Opera, IE 8/7/6

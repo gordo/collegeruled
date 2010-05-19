@@ -23,6 +23,8 @@
 			#collegeruled:hover textarea {background-color:#efe9e9; opacity:0.3; text-decoration:underline;}
 			#collegeruled textarea:focus, #collegeruled textarea:active {background-color:transparent; outline:0; text-decoration:none;}
 
+			#themessage {position:absolute;}
+
 			#sosumi {margin:1em 0;}
 			#sosumi a:hover {text-decoration:none; color:#abc;}
 			#sosumi, #sosumi a, #sosumi p, #sosumi p a {font-size:10pt;}
@@ -39,7 +41,7 @@
 			<li id="liner" style="height:630px;"></li>
 			<li id="headermargin"></li>
 			<li>Dear Gordon,</li>
-			<li></li>			
+			<li></li>
 			<li>My mommy calls me <input type="text" placeholder="Many Baby Names" /> and you can email me back at <input type="email" placeholder="yourmail@place.com" /> in case you'd like to respond.</li>
 			<li></li>
 			<li>And I just want to say...</li>
@@ -71,7 +73,7 @@
 				var collegeruled = document.getElementById("collegeruled");
 				var liner = document.getElementById("liner");
 				var themessage = document.getElementById("themessage");
-			
+
 				function grow() {
 					if (this.scrollHeight > this.clientHeight) {
 						this.style.height = parseInt(this.style.height) + 25 + "px";
@@ -82,14 +84,14 @@
 					if (!document.getElementById)
 						return;
 					themessage.onkeypress = grow;
-					
+
 				}
 				function growPage() {
-					if (parseInt(themessage.style.height) >= 475) {
-						
+					if (parseInt(themessage.style.height) >= 450) {
+
 						li = document.createElement("li");
 						collegeruled.appendChild(li);
-	
+
 						liner.style.height = parseInt(liner.style.height) + 25 + "px";
 						collegeruled.style.height = parseInt(collegeruled.style.height) + 25 + "px";
 					}
@@ -99,7 +101,7 @@
 
 		<!--Created: 2010 May 12-->
 		<!--Revised: 2010 May 19-->
-		
+
 		<script type="text/javascript">
 		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
